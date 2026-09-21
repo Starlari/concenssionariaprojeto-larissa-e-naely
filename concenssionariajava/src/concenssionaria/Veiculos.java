@@ -1,7 +1,8 @@
 package concenssionaria;
 
 public class Veiculos {
-   public static void main(String[] args) {
-    System.out.println("Sistema de cadastro de veículos");
-   }
+   String modelo;
+   String marca;
+   int ano;
+   double preco;
 }

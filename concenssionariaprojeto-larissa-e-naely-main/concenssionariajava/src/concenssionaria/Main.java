@@ -1,17 +1,35 @@
 package concenssionaria;
 
-public class Main {
-    public static void main(String[] args) {
-        Veiculos carro =new Veiculos();
-        
-        carro.modelo = "song pro flex";
-        carro.marca = "BYD";
-        carro.ano = 2027;
-        carro.preco = 199990.00;
+import java.util.Scanner;
 
-        System.out.println(carro.modelo);
-        System.out.println(carro.marca);
-        System.out.println(carro.ano);
-        System.out.println(carro.preco);
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner A = new Scanner(System.in);
+        
+        veiculos carro = new veiculos();
+
+        System.out.println("Cadastro de veículos");
+        System.out.print("Modelo: ");
+        carro.modelo = A.nextLine();
+
+        System.out.print("Marca: ");
+        carro.marca = A.nextLine();
+
+        System.out.print("Ano: ");
+        carro.ano = A.nextInt();
+
+        System.out.print("Preço: ");
+        carro.preco = A.nextDouble();
+
+        System.out.println();
+
+        System.out.println("Veículo cadastrado!");
+
+        System.out.println("Modelo: " + carro.modelo);
+        System.out.println("Marca: " + carro.marca);
+        System.out.println("Ano: " + carro.ano);
+        System.out.println("Preço: " + carro.preco);
+
+        A.close();
     }
 }
